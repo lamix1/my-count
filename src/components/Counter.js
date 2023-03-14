@@ -7,7 +7,9 @@ export default class Counter extends Component {
         step: 2,
     };
     incrementar() {
+        if (this.state.contador < this.props.limite) {
         this.setState({ count: this.state.count + this.state.step });
+        }
     }
     decrementar() {
         this.setState({ count: this.state.count - this.state.step });
